@@ -4,7 +4,7 @@ get_header();
 get_template_part( 'template-parts/section', 'hero' );
 ?>
 
-<section class="section-wrap">
+<section class="section-wrap page-interior">
   <div class="container">
     <div class="row entry-content">
       <div class="col-xs-12">

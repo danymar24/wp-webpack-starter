@@ -7,16 +7,7 @@ Template Name: Homepage
  while ( have_posts() ) : the_post();
 
  get_template_part( 'template-parts/section', 'hero' );
-
  ?>
-<section class="hero page-header vertical-center">
-  <div class="container">
-    <div class="row center-xs">
-      <div class="col-xs-12 hero-text">
-      </div><!--/.col-->
-    </div><!--/.row-->
-  </div><!--/.container-->
-</section><!--/.hero-->
 
 <section class="section-wrap home-intro bg-white">
   <div class="container">
