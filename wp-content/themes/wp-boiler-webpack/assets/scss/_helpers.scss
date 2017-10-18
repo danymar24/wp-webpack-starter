@@ -42,10 +42,6 @@
 }
 .border-bottom {
   border-bottom: 1px solid $color-gray;
-  &.border-dark { border-color: $color-border-dark; }
-  &.border-light { border-color: $color-border-light; }
-  &.border-primary { border-color: $color-primary; }
-  &.border-secondary { border-color: $color-secondary; }
 }
 
 // Layouts
@@ -60,14 +56,14 @@
 
 .padded { padding: 15px; }
 .pad-top { padding-top: 30px; }
-.pad-top-mobile {
-  @media (max-width: $md) {
+.pad-top-phone {
+  @include for-size(phone-only) {
     padding-top: 30px;
   }
 }
 .pad-btm { padding-bottom: 30px; }
-.pad-btm-mobile {
-  @media (max-width: $md) {
+.pad-btm-phone {
+  @include for-size(phone-only) {
     padding-bottom: 30px;
   }
 }
