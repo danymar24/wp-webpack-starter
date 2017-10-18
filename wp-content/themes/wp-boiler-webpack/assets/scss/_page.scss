@@ -1,0 +1,219 @@
+// Page layout
+.site {
+  padding: 0;
+  @include breakpoint(md) {
+    background: $color-secondary;
+    padding: calc-em(30px);
+    padding-bottom: 0;
+  }
+}
+.hero,
+.page-header {
+  position: relative;
+  padding: calc-em(20px) 0;
+  background-color: $color-primary;
+  background-image: url(http://hugeinc.github.io/flexboxgrid-sass/images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: fadeIn 0.5s linear;
+  > * {
+    z-index: 1;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-primary, 0.5);
+    z-index: -1;
+  }
+  .hero-text {
+    color: $color-primary;
+    margin-top: calc-em(-20px);
+    padding: calc-em(50px) 0;
+    .sub-title {
+      margin-bottom: calc-em(15px);
+    }
+  }
+}
+
+.page-header {
+  padding: calc-em(150px) 0 calc-em(75px);
+  background-color: $color-primary;
+  animation: fadeIn 0.5s linear;
+  @include breakpoint(md) {
+    padding: calc-em(200px) 0;
+  }
+}
+.page-title {
+  color: $color-white;
+}
+.section-heading {
+  padding: calc-em(15px) 0;
+  @include breakpoint(md) {
+    text-align: center;
+    padding: calc-em(30px);
+  }
+}
+.section-wrap {
+  padding: calc-em(30px) 0;
+  @include breakpoint(md) {
+    padding: calc-em(60px) 0;
+  }
+}
+.section-entry {
+  min-height: calc-em(500px);
+}
+
+.section-cta {
+  padding: calc-em(50px) 0;
+  @include breakpoint(md) {
+    padding: calc-em(100px) 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: calc-em(10px);
+  }
+}
+
+
+
+// home
+.home-intro {
+  img {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+// Resources
+
+.filter-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+.filter-border-bottom {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: calc-em(10px);
+  background: $color-primary;
+}
+.filters {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  li {
+    padding: calc-em(10px) calc-em(20px);
+  }
+}
+.filters,
+.filter-title {
+  margin-bottom: calc-em(30px);
+}
+.card {
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.resources {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.card {
+	position: relative;
+	margin: calc-em(12px) calc-em(5px);
+	padding: 0;
+	background: $color-white;
+	transition: 0.3s all ease-in-out;
+	&:hover,&:focus {
+		background: white;
+		box-shadow: rgba($color-primary, 0.45) 0px 0px 20px 0px;
+    .card-header {
+      &:after {
+        background: rgba($color-primary, 0.1);
+      }
+    }
+	}
+}
+.card-header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: url('https://placeimg.com/640/480/nature') center center no-repeat;
+  background-size: cover;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-black, 0.25);
+  }
+}
+.card-body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: calc-em(30px) calc-em(15px);
+  text-align: center;
+  background-color: $color-white;
+  @include breakpoint(md) {
+    min-height: 200px;
+  }
+  .cat-name {
+    display: inline-block;
+    margin-bottom: calc-em(10px);
+    padding: calc-em(5px) calc-em(10px);
+    text-transform: uppercase;
+    border: 1px solid $color-secondary;
+    background: transparent;
+    a {
+      &:hover,&:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  .dl, a {
+    color: $color-black;
+  }
+  .dl {
+    position: relative;
+    width: 100%;
+    padding-top: calc-em(100px);
+    text-transform: uppercase;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// animations
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
