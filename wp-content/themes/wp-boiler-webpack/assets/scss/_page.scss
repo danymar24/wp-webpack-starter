@@ -1,7 +1,8 @@
 // PAGE LAYOUT
 // Major page structure + classes
 
-.site-content {} //wraps entire site, if needed
+.site {} //wraps entire site
+.site-content {} //wraps everything after header
 
 // Page Hero
 .hero {

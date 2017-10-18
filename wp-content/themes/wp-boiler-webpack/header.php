@@ -11,12 +11,21 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
+<?php
+//Custom Field Group == Site Options
+$site_logo = get_field('site_logo', 'option');
+?>
+
 <header class="header" role="banner">
     <div class="row around-xs">
       <div class="col-xs-6 col-md-2">
         <div class="logo">
           <a href="<?php echo home_url(); ?>">
-            LOGO
+            <?php if ($site_logo) : ?>
+              <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo">
+            <?php else : ?>
+              <?php bloginfo('name'); ?>
+            <?php endif; ?>
           </a>
         </div><!--/.logo-->
       </div><!--/.col-->

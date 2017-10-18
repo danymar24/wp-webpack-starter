@@ -86,6 +86,33 @@ function sparxoo_dev_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'sparxoo_dev_scripts' );
 
+
+// ACF - Add Options page-header
+// Usage within template file: the_field('header_title', 'option');
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page();
+}
+
+
+// Custom Excerpt Length
+function themify_custom_excerpt_length( $length ) {
+   return 30;
+}
+add_filter( 'excerpt_length', 'themify_custom_excerpt_length', 999 );
+
+// Custom Excerpt More Link (...)
+add_action( 'after_setup_theme', 'custom_excerpt_more' );
+function custom_excerpt_more() {
+   // add more link to excerpt
+   function theme_custom_excerpt_more($more) {
+      global $post;
+      return '<a class="more-link" href="'. get_permalink($post->ID) . '">'. __('...', 'sparxoo_dev') .'</a>';
+   }
+   add_filter('excerpt_more', 'theme_custom_excerpt_more');
+}
+
+
+// File includes
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
