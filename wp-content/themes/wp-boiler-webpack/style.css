@@ -1276,6 +1276,72 @@ body.nav-open {
     background-size: 25px;
     padding-left: 48px; }
 
+.search-form {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  background: transparent; }
+  .search-form .search-field {
+    position: relative;
+    outline: 0;
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-size: 1.125em;
+    color: #676767;
+    border-bottom: 1px solid #222;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    transition: all 0.2s ease-in-out; }
+    .search-form .search-field:focus {
+      border-color: black; }
+
+.search-submit {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  padding: 15px 0;
+  border: none;
+  background: transparent;
+  outline: 0; }
+
+.search-svg {
+  width: 1em;
+  height: 1em;
+  font-size: 24px;
+  fill: currentColor;
+  color: #0c5993; }
+  .search-svg:hover {
+    cursor: pointer;
+    color: #e0d6c2; }
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #a2a2a2; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #a2a2a2;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #a2a2a2;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a2a2a2; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #a2a2a2; }
+
 .text-white {
   color: #fff; }
 
