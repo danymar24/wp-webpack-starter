@@ -29,7 +29,11 @@ const config = {
 				query: {
 					presets: ['es2015']
 				}
-			}
+			},
+		        {
+				test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, 
+				loader: 'url-loader?limit=100000'
+		        }
 		]
 	},
 	plugins: [
