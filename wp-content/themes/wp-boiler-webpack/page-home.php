@@ -22,6 +22,7 @@ Template Name: Homepage
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        Homepage content, yo.
       </div><!--/.col-->
     </div><!--/.row-->
   </div><!--/.container-->
