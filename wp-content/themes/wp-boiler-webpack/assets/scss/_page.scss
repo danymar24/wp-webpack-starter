@@ -1,219 +1,188 @@
-// Page layout
-.site {
-  padding: 0;
+// PAGE LAYOUT
+// Major page structure + classes
+
+.site {} //wraps entire site, if needed
+
+// Page Hero
+.hero {
+  padding: 150px 0 75px;
   @include breakpoint(md) {
-    background: $color-secondary;
-    padding: calc-em(30px);
-    padding-bottom: 0;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 .hero,
 .page-header {
   position: relative;
-  padding: calc-em(20px) 0;
   background-color: $color-primary;
-  background-image: url(http://hugeinc.github.io/flexboxgrid-sass/images/bg2.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   z-index: 1;
-  animation: fadeIn 0.5s linear;
+  animation: fadeIn 0.2s linear;
   > * {
     z-index: 1;
   }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color-primary, 0.5);
-    z-index: -1;
+  &.has-overlay {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-primary, 0.75);
+      z-index: -1;
+    }
   }
   .hero-text {
-    color: $color-primary;
-    margin-top: calc-em(-20px);
-    padding: calc-em(50px) 0;
-    .sub-title {
-      margin-bottom: calc-em(15px);
+    color: $color-white;
+    text-align: center;
+    .hero-title {
+      font-family: $font-heading;
+    }
+    .hero-subtitle {
+      margin: 15px auto 30px;
+      @include for-size(phone-only) {
+        max-width: 65%;
+      }
     }
   }
 }
 
-.page-header {
-  padding: calc-em(150px) 0 calc-em(75px);
-  background-color: $color-primary;
-  animation: fadeIn 0.5s linear;
-  @include breakpoint(md) {
-    padding: calc-em(200px) 0;
+.hero.hero-type-slider {
+  width: 100%;
+  left: 0 !important;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: -1;
+  @include for-size(phone-only) {
+    overflow-y: scroll;
+    .hero-text {
+      padding: 0;
+    }
+  }
+  &.is-selected {
+    opacity: 1;
+    z-index: 0;
+    .hero-text {
+      opacity: 1;
+      z-index: 0
+    }
+  }
+  .hero-text {
+    opacity: 0;
   }
 }
-.page-title {
-  color: $color-white;
+// Flickity slider, if hero type == "slider"
+.flickity-slider {
+  transform: none !important;
 }
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid $color-secondary;
+  cursor: pointer;
+}
+.flickity-page-dots .dot.is-selected {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: $color-secondary;
+}
+.gallery {
+  position: relative;
+  outline: none;
+}
+
+
+// Page Header
+.page-header {
+  padding: 150px 0 75px;
+  background-color: $color-primary;
+  @include for-size(phone-only) {
+    padding-top: 200px;
+    padding-bottom: 125px;
+  }
+}
+
+// Section Header & it's content
 .section-heading {
-  padding: calc-em(15px) 0;
-  @include breakpoint(md) {
+  @include for-size(phone-only) {
     text-align: center;
-    padding: calc-em(30px);
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 .section-wrap {
-  padding: calc-em(30px) 0;
-  @include breakpoint(md) {
-    padding: calc-em(60px) 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section-wrap-lg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include for-size(phone-only) {
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
-.section-entry {
-  min-height: calc-em(500px);
+.section-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: $font-heading;
 }
 
-.section-cta {
-  padding: calc-em(50px) 0;
-  @include breakpoint(md) {
-    padding: calc-em(100px) 0;
+
+// Interior page default
+.page-interior {
+
+}
+
+// Interior page default, basic content
+.interior-basic-content {
+
+}
+
+
+
+// Search Results page
+.page-search {
+
+}
+
+
+// Single & Default page content
+.page-single {
+
+}
+
+.entry-content {
+  > * {
+    font-family: $font-body; 
   }
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: calc-em(10px);
+    font-family: $font-heading;
   }
-}
-
-
-
-// home
-.home-intro {
-  img {
+  a {
+    color: $color-secondary;
+    text-decoration: underline;
+  }
+  iframe {
     width: 100%;
-    max-width: 260px;
-    margin: 0 auto;
   }
-}
-
-// Resources
-
-.filter-title {
-  text-align: center;
-  text-transform: uppercase;
-  color: $color-primary;
-}
-.filter-border-bottom {
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin-top: calc-em(10px);
-  background: $color-primary;
-}
-.filters {
-  margin: 0 auto;
-  padding: 0;
-  list-style-type: none;
-  li {
-    padding: calc-em(10px) calc-em(20px);
-  }
-}
-.filters,
-.filter-title {
-  margin-bottom: calc-em(30px);
-}
-.card {
-  display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-.resources {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-.card {
-	position: relative;
-	margin: calc-em(12px) calc-em(5px);
-	padding: 0;
-	background: $color-white;
-	transition: 0.3s all ease-in-out;
-	&:hover,&:focus {
-		background: white;
-		box-shadow: rgba($color-primary, 0.45) 0px 0px 20px 0px;
-    .card-header {
-      &:after {
-        background: rgba($color-primary, 0.1);
-      }
-    }
-	}
-}
-.card-header {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  background: url('https://placeimg.com/640/480/nature') center center no-repeat;
-  background-size: cover;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($color-black, 0.25);
-  }
-}
-.card-body {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: calc-em(30px) calc-em(15px);
-  text-align: center;
-  background-color: $color-white;
-  @include breakpoint(md) {
-    min-height: 200px;
-  }
-  .cat-name {
-    display: inline-block;
-    margin-bottom: calc-em(10px);
-    padding: calc-em(5px) calc-em(10px);
-    text-transform: uppercase;
-    border: 1px solid $color-secondary;
-    background: transparent;
-    a {
-      &:hover,&:focus {
-        text-decoration: none;
-      }
-    }
-  }
-  .dl, a {
-    color: $color-black;
-  }
-  .dl {
-    position: relative;
-    width: 100%;
-    padding-top: calc-em(100px);
-    text-transform: uppercase;
-    a {
-      text-decoration: underline;
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-// animations
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  50% {opacity: 0.5;}
-  100% {opacity: 1;}
 }

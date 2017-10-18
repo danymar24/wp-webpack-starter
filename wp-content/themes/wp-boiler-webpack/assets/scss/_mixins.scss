@@ -15,29 +15,27 @@
   @return ($px / $base) * 1em;
 }
 
-// Media query breakpoints
-// Usage:  @include breakpoint(sm) { width: 100%; }
+// Media query mixin
+// Usage:
+// @include for-size(phone-only) {
+//    padding: 20px;
+//  }
+@mixin for-size($size) {
 
-$xl: 1200px;
-$lg: 992px;
-$md: 768px;
-$sm: 576px;
-$xs: 375px;
-@mixin breakpoint($point) {
-  @if $point == xl {
-    @media (min-width: calc-em($xl)) { @content; } //"xl" = above 1200
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
   }
-  @else if $point == lg {
-    @media (min-width: calc-em($lg)) { @content; } //"lg" = above 992
-  }
-  @else if $point == md {
-    @media (min-width: calc-em($md)) { @content; } //"md" = above 768
-  }
-  @else if $point == sm {
-    @media (min-width: calc-em($sm))  { @content; } // "sm" = above 576
-  }
-  @else if $point == xs {
-    @media (max-width: calc-em($sm))  { @content; } // "xs" = below 576
-  }
+
 }
-
