@@ -943,7 +943,7 @@ q:after {
   margin: 0;
   padding: 0;
   list-style-type: none; }
-  @media (max-width: 599px) {
+  @media (min-width: 600px) {
     .nav-primary {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -984,7 +984,7 @@ q:after {
       left: 0;
       right: 0; }
 
-@media (max-width: 599px) {
+@media (min-width: 600px) {
   .nav-mobile,
   .nav-toggle {
     display: none; } }
@@ -1099,7 +1099,7 @@ body.nav-open {
           animation: fadeIn 0.2s linear; }
   .hero > *,
   .page-header > * {
-    z-index: 1; }
+    z-index: 2; }
   .hero.has-overlay:before,
   .page-header.has-overlay:before {
     content: '';

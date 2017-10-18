@@ -43,7 +43,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  @include for-size(phone-only) {
+  @include for-size(tablet-portrait-up) {
     display: flex;
     justify-content: flex-end;
   }
@@ -86,7 +86,7 @@
 // Nav mobile
 .nav-mobile,
 .nav-toggle {
-  @include for-size(phone-only) {
+  @include for-size(tablet-portrait-up) {
     display: none;
   }
 }

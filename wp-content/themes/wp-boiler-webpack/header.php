@@ -22,7 +22,7 @@
       </div><!--/.col-->
       <div class="col-xs-6 col-md-10">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-primary') ); ?>
-        <div class="row end-xs middle-xs">
+        <div class="row pull-right">
           <div class="nav-toggle row end-xs middle-xs" id="js-nav-toggle">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
