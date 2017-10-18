@@ -26,49 +26,49 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
 
 h1,
 .h1 {
-	font-size: calc-em(32px);
+	font-size: calc-em(52px);
 	@include for-size(phone-only) {
-		font-size: calc-em(62px);
+		font-size: calc-em(34px);
 	}
 }
 h2,
 .h2 {
-	font-size: calc-em(28px);
+	font-size: calc-em(46px);
 	@include for-size(phone-only) {
-		font-size: calc-em(36px);
+		font-size: calc-em(30px);
 	}
 }
 h3,
 .h3 {
-	font-size: calc-em(24px);
-	@include for-size(phone-only) {
-		font-size: calc-em(32px);
-	}
-}
-h4,
-.h4 {
-	font-size: calc-em(22px);
+	font-size: calc-em(38px);
 	@include for-size(phone-only) {
 		font-size: calc-em(26px);
 	}
 }
+h4,
+.h4 {
+	font-size: calc-em(30px);
+	@include for-size(phone-only) {
+		font-size: calc-em(22px);
+	}
+}
 h5,
 .h5 {
-	font-size: calc-em(18px);
+	font-size: calc-em(22px);
 	@include for-size(phone-only) {
-		font-size: calc-em(20px);
+		font-size: calc-em(18px);
 	}
 }
 h6,
 .h6 {
-	font-size: calc-em(16px);
+	font-size: calc-em(18px);
+  @include for-size(phone-only) {
+		font-size: calc-em(16px);
+	}
 }
 p {
   font-size: calc-em(16px);
 	margin: 0 0 calc-em(10px);
-	@include for-size(phone-only) {
-		font-size: calc-em(18px);
-	}
 }
 a {
 	background-color: transparent;

@@ -154,11 +154,10 @@
 
 }
 
-// Interior page default, basic content
-.interior-basic-content {
+// Single & Default page content
+.page-single {
 
 }
-
 
 
 // Search Results page
@@ -167,17 +166,15 @@
 }
 
 
-// Single & Default page content
-.page-single {
-
-}
-
 .entry-content {
   > * {
-    font-family: $font-body;
+    font-family: $font-body; //override wp editor auto added styles
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: $font-heading;
+    font-family: $font-heading; //override wp editor auto added styles
+  }
+  p {
+    margin: 0 0 calc-em(20px);
   }
   a {
     color: $color-secondary;

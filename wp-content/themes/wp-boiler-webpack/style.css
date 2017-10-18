@@ -68,54 +68,55 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h1,
 .h1 {
-  font-size: 2em; }
+  font-size: 3.25em; }
   @media (max-width: 599px) {
     h1,
     .h1 {
-      font-size: 3.875em; } }
+      font-size: 2.125em; } }
 
 h2,
 .h2 {
-  font-size: 1.75em; }
+  font-size: 2.875em; }
   @media (max-width: 599px) {
     h2,
     .h2 {
-      font-size: 2.25em; } }
+      font-size: 1.875em; } }
 
 h3,
 .h3 {
-  font-size: 1.5em; }
+  font-size: 2.375em; }
   @media (max-width: 599px) {
     h3,
     .h3 {
-      font-size: 2em; } }
+      font-size: 1.625em; } }
 
 h4,
 .h4 {
-  font-size: 1.375em; }
+  font-size: 1.875em; }
   @media (max-width: 599px) {
     h4,
     .h4 {
-      font-size: 1.625em; } }
+      font-size: 1.375em; } }
 
 h5,
 .h5 {
-  font-size: 1.125em; }
+  font-size: 1.375em; }
   @media (max-width: 599px) {
     h5,
     .h5 {
-      font-size: 1.25em; } }
+      font-size: 1.125em; } }
 
 h6,
 .h6 {
-  font-size: 1em; }
+  font-size: 1.125em; }
+  @media (max-width: 599px) {
+    h6,
+    .h6 {
+      font-size: 1em; } }
 
 p {
   font-size: 1em;
   margin: 0 0 0.625em; }
-  @media (max-width: 599px) {
-    p {
-      font-size: 1.125em; } }
 
 a {
   background-color: transparent;
@@ -1215,6 +1216,9 @@ body.nav-open {
 
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   font-family: "Francois One", sans-serif; }
+
+.entry-content p {
+  margin: 0 0 1.25em; }
 
 .entry-content a {
   color: #ece6da;
