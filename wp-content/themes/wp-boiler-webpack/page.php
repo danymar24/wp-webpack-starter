@@ -3,13 +3,14 @@ get_header();
 
 get_template_part( 'template-parts/section', 'hero' );
 ?>
-<section class="section-wrap page-intro">
+
+<section class="section-wrap">
   <div class="container">
-    <div class="row">
+    <div class="row entry-content">
       <div class="col-xs-12">
         <?php
           while ( have_posts() ) : the_post();
-          get_template_part( 'template-parts/content', 'page' );
+            the_content();
           endwhile;
         ?>
       </div><!--/.col-->
@@ -17,8 +18,6 @@ get_template_part( 'template-parts/section', 'hero' );
   </div><!--/.container-->
 </section>
 
-
 <?php
-//get_sidebar();
 get_footer();
 ?>
