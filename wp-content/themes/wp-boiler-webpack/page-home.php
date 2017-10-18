@@ -9,7 +9,9 @@ Template Name: Homepage
  get_template_part( 'template-parts/section', 'hero' );
  ?>
 
-<section class="section-wrap home-intro bg-white">
+<div class="page-home">
+
+<section class="section-wrap bg-white">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -18,6 +20,8 @@ Template Name: Homepage
     </div><!--/.row-->
   </div><!--/.container-->
 </section>
+
+</div><!--/.page-home-->
 
 <?php endwhile; // End loop ?>
 

@@ -4,7 +4,9 @@ get_header();
 get_template_part( 'template-parts/section', 'hero' );
 ?>
 
-<section class="section-wrap page-interior">
+<div class="page-interior page-default">
+
+<section class="section-wrap">
   <div class="container">
     <div class="row entry-content">
       <div class="col-xs-12">
@@ -17,6 +19,8 @@ get_template_part( 'template-parts/section', 'hero' );
     </div><!--/.row-->
   </div><!--/.container-->
 </section>
+
+</div><!--/.page-inteior-->
 
 <?php
 get_footer();

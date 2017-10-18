@@ -7,7 +7,9 @@ get_header();
 get_template_part( 'template-parts/section', 'hero' );
 ?>
 
-<section class="section-wrap page-interior">
+<div class="page-interior">
+
+<section class="section-wrap">
   <div class="container">
     <?php
       while ( have_posts() ) : the_post();
@@ -16,6 +18,8 @@ get_template_part( 'template-parts/section', 'hero' );
     ?>
   </div><!--/.container-->
 </section>
+
+</div><!--/.page-interior-->
 
 <?php
 get_footer();
