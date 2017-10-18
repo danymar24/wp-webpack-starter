@@ -1,48 +1,29 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package sparxoo-dev
- */
+get_header();
 
-get_header(); ?>
+get_template_part( 'template-parts/section', 'hero' );
+?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+ <section class="section-wrap page-intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <?php
+          if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
 
-		<?php
-		if ( have_posts() ) : ?>
+              get_template_part( 'template-parts/content', 'search' );
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'sparxoo-dev' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+            endwhile;
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+            the_posts_navigation();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+          else :
 
-			endwhile;
+            get_template_part( 'template-parts/content', 'none' );
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+          endif; ?>
+        </div><!--/.col-->
+      </div><!--/.row-->
+    </div><!--/.container-->
+  </section>
