@@ -31,7 +31,7 @@ const config = {
 				}
 			},
 		        {
-				test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, 
+				test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
 				loader: 'url-loader?limit=100000'
 		        }
 		]
@@ -39,7 +39,7 @@ const config = {
 	plugins: [
 		new ExtractTextPlugin('../style.css'),
 		new BrowserSyncPlugin({
-		    proxy: 'localhost/wp-starter', // CHANGE THIS TO LOCALHOST REL PATH
+		    proxy: 'localhost/brp', // CHANGE THIS TO LOCALHOST REL PATH
 		    port: 3000,
 		    files: [
 		        '**/*.php'
