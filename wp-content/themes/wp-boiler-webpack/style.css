@@ -51,7 +51,7 @@ tbody tr:nth-child(odd) th {
 body {
   background: #fff;
   color: #222;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Amethysta", sans-serif;
   font-size: 100%;
   font-weight: normal;
   line-height: 1.5; }
@@ -60,7 +60,7 @@ body {
       line-height: 1.5625; } }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Francois One", sans-serif;
+  font-family: "Yantramanav", serif;
   font-weight: normal;
   line-height: 1.2;
   margin: 0;
@@ -1104,7 +1104,7 @@ body.nav-open {
     color: #fff;
     text-align: center; }
     .hero .hero-text .hero-title {
-      font-family: "Francois One", sans-serif; }
+      font-family: "Yantramanav", serif; }
     .hero .hero-text .hero-subtitle {
       margin: 15px auto 30px; }
       @media (min-width: 900px) {
@@ -1160,13 +1160,13 @@ body.nav-open {
 .section-title {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-family: "Francois One", sans-serif; }
+  font-family: "Yantramanav", serif; }
 
 .entry-content > * {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Amethysta", sans-serif; }
 
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-  font-family: "Francois One", sans-serif; }
+  font-family: "Yantramanav", serif; }
 
 .entry-content p {
   margin: 0 0 1.25em; }
@@ -1184,7 +1184,7 @@ body.nav-open {
   margin-top: 10px;
   min-width: 200px;
   padding: 0.75em 1.5625em;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Amethysta", sans-serif;
   font-size: 1em;
   color: #fff;
   background-color: #0c5993;
@@ -1292,7 +1292,7 @@ div.wpcf7-response-output {
   width: 100%;
   bottom: -60px;
   border: none;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Amethysta", sans-serif; }
 
 .wpcf7-not-valid {
   border-color: #880e14; }
