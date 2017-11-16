@@ -4,7 +4,7 @@ body {
 	background: $color-white;
 	color: $color-body;
 	font-family: $font-body;
-	font-size: $font-size-body; //use relative sizings for everything; body = 100% or 16px
+	font-size: $font-size-body; //using relative sizings
 	font-weight: normal;
 	line-height: 1.5;
 	//sticky footer using flex: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
@@ -76,14 +76,10 @@ a {
 	text-decoration: none;
 	word-wrap: break-word;
 	&:active,
+  &:focus,
 	&:hover {
 		outline: 0;
-	}
-
-	&:active,
-	&:focus,
-	&:hover {
-		color: darken( $color-primary, 15% );
+		color: darken($color-primary, 15%);
 		text-decoration: underline;
 	}
 }
@@ -99,12 +95,7 @@ hr {
 
 b,
 strong {
-	font-weight: inherit;
-}
-
-b,
-strong {
-	font-weight: bolder;
+	font-weight: bold;
 }
 dfn {
 	font-style: italic;
@@ -116,7 +107,6 @@ mark {
 small {
 	font-size: 80%;
 }
-
 sub,
 sup {
 	font-size: 75%;
@@ -124,23 +114,19 @@ sup {
 	position: relative;
 	vertical-align: baseline;
 }
-
 sup {
 	top: -0.5em;
 }
-
 sub {
 	bottom: -0.25em;
 }
-
 blockquote {
-	font-size: calc-em(19px);
+	font-size: calc-em(18px);
 	font-style: italic;
 	margin: 0 0 calc-em(10px);
 	padding-left: calc-em(16px, 19px);
 	padding-right: calc-em(16px, 19px);
-	border-left: 2px solid $color-primary;
-
+	border-left: 2px solid $color-secondary;
 	cite {
 		color: $color-gray-dark;
 		font-size: calc-em(16px, 19px);

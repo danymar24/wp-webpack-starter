@@ -11,8 +11,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #222;
-  background-color: #008f8b;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -123,9 +121,8 @@ a {
   color: #094572;
   text-decoration: none;
   word-wrap: break-word; }
-  a:active, a:hover {
-    outline: 0; }
   a:active, a:focus, a:hover {
+    outline: 0;
     color: #062e4c;
     text-decoration: underline; }
 
@@ -139,11 +136,7 @@ hr {
 
 b,
 strong {
-  font-weight: inherit; }
-
-b,
-strong {
-  font-weight: bolder; }
+  font-weight: bold; }
 
 dfn {
   font-style: italic; }
@@ -169,12 +162,12 @@ sub {
   bottom: -0.25em; }
 
 blockquote {
-  font-size: 1.1875em;
+  font-size: 1.125em;
   font-style: italic;
   margin: 0 0 0.625em;
   padding-left: 0.84211em;
   padding-right: 0.84211em;
-  border-left: 2px solid #0c5993; }
+  border-left: 2px solid #008f8b; }
   blockquote cite {
     color: #808080;
     font-size: 0.84211em;
@@ -1184,12 +1177,13 @@ body.nav-open {
   margin-top: 10px;
   min-width: 200px;
   padding: 0.75em 1.5625em;
-  font-family: "Amethysta", sans-serif;
+  font-family: "Yantramanav", serif;
   font-size: 1em;
   color: #fff;
   background-color: #0c5993;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   border-radius: 3px;
   cursor: pointer;
   vertical-align: middle;

@@ -19,12 +19,13 @@
   margin-top: 10px;
   min-width: 200px;
   padding: calc-em(12px) calc-em(25px);
-  font-family: $font-body;
+  font-family: $font-heading;
   font-size: calc-em(16px);
   color: $color-white;
   background-color: $color-primary;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   border-radius: 3px;
   cursor: pointer;
   vertical-align: middle;
