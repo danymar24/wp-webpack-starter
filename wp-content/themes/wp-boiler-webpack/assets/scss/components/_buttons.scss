@@ -4,7 +4,8 @@
   &:hover {
     text-decoration: none;
     background-color: darken($bg,8%);
-    @include transition(all, 0.2s, ease-out); 
+    color: $color-white;
+    @include transition(all, 0.2s, ease-out);
   }
   &:active {
     text-decoration: none;
@@ -15,11 +16,14 @@
 .btn {
   display: inline-block;
   margin: 0;
-  padding: calc-em(9px) calc-em(25px);
+  margin-top: 10px;
+  min-width: 200px;
+  padding: calc-em(12px) calc-em(25px);
   font-family: $font-body;
   font-size: calc-em(16px);
   color: $color-white;
   background-color: $color-primary;
+  text-align: center;
   text-decoration: none;
   border-radius: 3px;
   cursor: pointer;

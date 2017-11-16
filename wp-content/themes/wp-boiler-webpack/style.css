@@ -1181,11 +1181,14 @@ body.nav-open {
 .btn, .gform_button {
   display: inline-block;
   margin: 0;
-  padding: 0.5625em 1.5625em;
+  margin-top: 10px;
+  min-width: 200px;
+  padding: 0.75em 1.5625em;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
   color: #fff;
   background-color: #0c5993;
+  text-align: center;
   text-decoration: none;
   border-radius: 3px;
   cursor: pointer;
@@ -1196,6 +1199,7 @@ body.nav-open {
     .btn.primary:hover, .primary.gform_button:hover {
       text-decoration: none;
       background-color: #09426d;
+      color: #fff;
       transition: all 0.2s ease-out; }
     .btn.primary:active, .primary.gform_button:active {
       text-decoration: none;
@@ -1205,6 +1209,7 @@ body.nav-open {
     .btn.secondary:hover, .gform_button:hover {
       text-decoration: none;
       background-color: #006663;
+      color: #fff;
       transition: all 0.2s ease-out; }
     .btn.secondary:active, .gform_button:active {
       text-decoration: none;
@@ -1215,6 +1220,7 @@ body.nav-open {
     .btn.white:hover, .white.gform_button:hover {
       text-decoration: none;
       background-color: #ebebeb;
+      color: #fff;
       transition: all 0.2s ease-out; }
     .btn.white:active, .white.gform_button:active {
       text-decoration: none;
