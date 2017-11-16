@@ -39,3 +39,11 @@
   }
 
 }
+
+
+// Transition mixin
+// Usage:
+// @include transition(all, 0.2s, ease-out);
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  transition: $what $time $how;
+}

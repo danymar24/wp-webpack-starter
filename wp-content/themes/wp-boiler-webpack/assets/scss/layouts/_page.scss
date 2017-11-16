@@ -78,41 +78,6 @@
     opacity: 0;
   }
 }
-// Flickity slider, if hero type == "slider"
-.flickity-slider {
-  transform: none !important;
-}
-.flickity-page-dots {
-  position: absolute;
-  width: 100%;
-  bottom: 15px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-  line-height: 1;
-}
-.flickity-rtl .flickity-page-dots { direction: rtl; }
-.flickity-page-dots .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background: transparent;
-  border-radius: 50%;
-  border: 1px solid $color-secondary;
-  cursor: pointer;
-}
-.flickity-page-dots .dot.is-selected {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background: $color-secondary;
-}
-.gallery {
-  position: relative;
-  outline: none;
-}
 
 
 // Page Header
