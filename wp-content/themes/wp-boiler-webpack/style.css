@@ -1083,27 +1083,15 @@ body.nav-open {
   overflow-x: hidden; }
 
 .hero {
-  padding: 150px 0 75px; }
-  @media (max-width: 599px) {
-    .hero {
-      padding-top: 200px;
-      padding-bottom: 200px; } }
-
-.hero,
-.page-header {
   position: relative;
   background-color: #0c5993;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  z-index: 1;
-  -webkit-animation: fadeIn 0.2s linear;
-          animation: fadeIn 0.2s linear; }
-  .hero > *,
-  .page-header > * {
+  z-index: 1; }
+  .hero > * {
     z-index: 2; }
-  .hero.has-overlay:before,
-  .page-header.has-overlay:before {
+  .hero.has-overlay:before {
     content: '';
     position: absolute;
     top: 0;
@@ -1112,19 +1100,15 @@ body.nav-open {
     height: 100%;
     background-color: rgba(12, 89, 147, 0.75);
     z-index: -1; }
-  .hero .hero-text,
-  .page-header .hero-text {
+  .hero .hero-text {
     color: #fff;
     text-align: center; }
-    .hero .hero-text .hero-title,
-    .page-header .hero-text .hero-title {
+    .hero .hero-text .hero-title {
       font-family: "Francois One", sans-serif; }
-    .hero .hero-text .hero-subtitle,
-    .page-header .hero-text .hero-subtitle {
+    .hero .hero-text .hero-subtitle {
       margin: 15px auto 30px; }
-      @media (max-width: 599px) {
-        .hero .hero-text .hero-subtitle,
-        .page-header .hero-text .hero-subtitle {
+      @media (min-width: 900px) {
+        .hero .hero-text .hero-subtitle {
           max-width: 65%; } }
 
 .hero.hero-type-slider {
@@ -1155,7 +1139,7 @@ body.nav-open {
       padding-top: 200px;
       padding-bottom: 125px; } }
 
-@media (max-width: 599px) {
+@media (min-width: 900px) {
   .section-heading {
     text-align: center;
     padding-top: 30px;
@@ -1168,7 +1152,7 @@ body.nav-open {
 .section-wrap-lg {
   padding-top: 60px;
   padding-bottom: 60px; }
-  @media (max-width: 599px) {
+  @media (min-width: 900px) {
     .section-wrap-lg {
       padding-top: 150px;
       padding-bottom: 150px; } }
@@ -1212,7 +1196,7 @@ body.nav-open {
     .btn.primary:hover, .primary.gform_button:hover {
       text-decoration: none;
       background-color: #09426d;
-      transition: all 0.3s ease; }
+      transition: all 0.2s ease-out; }
     .btn.primary:active, .primary.gform_button:active {
       text-decoration: none;
       background-color: #02121d; }
@@ -1221,7 +1205,7 @@ body.nav-open {
     .btn.secondary:hover, .gform_button:hover {
       text-decoration: none;
       background-color: #006663;
-      transition: all 0.3s ease; }
+      transition: all 0.2s ease-out; }
     .btn.secondary:active, .gform_button:active {
       text-decoration: none;
       background-color: #00100f; }
@@ -1231,7 +1215,7 @@ body.nav-open {
     .btn.white:hover, .white.gform_button:hover {
       text-decoration: none;
       background-color: #ebebeb;
-      transition: all 0.3s ease; }
+      transition: all 0.2s ease-out; }
     .btn.white:active, .white.gform_button:active {
       text-decoration: none;
       background-color: #bfbfbf; }

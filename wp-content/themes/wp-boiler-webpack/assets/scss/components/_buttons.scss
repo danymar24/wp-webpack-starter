@@ -4,7 +4,7 @@
   &:hover {
     text-decoration: none;
     background-color: darken($bg,8%);
-    transition: all 0.3s ease;
+    @include transition(all, 0.2s, ease-out); 
   }
   &:active {
     text-decoration: none;

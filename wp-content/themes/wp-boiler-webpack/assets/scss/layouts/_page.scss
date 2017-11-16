@@ -9,21 +9,13 @@
 
 // Page Hero
 .hero {
-  padding: 150px 0 75px;
-  @include for-size(phone-only) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
-}
-.hero,
-.page-header {
   position: relative;
   background-color: $color-primary;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   z-index: 1;
-  animation: fadeIn 0.2s linear;
+  //animation: fadeIn 0.2s linear;
   > * {
     z-index: 2;
   }
@@ -47,13 +39,14 @@
     }
     .hero-subtitle {
       margin: 15px auto 30px;
-      @include for-size(phone-only) {
+      @include for-size(tablet-landscape-up) {
         max-width: 65%;
       }
     }
   }
 }
-
+// hero-type selected == "Slider"
+// via ACF (/assets/data/acf-hero.json)
 .hero.hero-type-slider {
   width: 100%;
   left: 0 !important;
@@ -79,7 +72,6 @@
   }
 }
 
-
 // Page Header
 .page-header {
   padding: 150px 0 75px;
@@ -92,7 +84,7 @@
 
 // Section Header & it's content
 .section-heading {
-  @include for-size(phone-only) {
+  @include for-size(tablet-landscape-up) {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -105,7 +97,7 @@
 .section-wrap-lg {
   padding-top: 60px;
   padding-bottom: 60px;
-  @include for-size(phone-only) {
+  @include for-size(tablet-landscape-up) {
     padding-top: 150px;
     padding-bottom: 150px;
   }
@@ -118,22 +110,17 @@
 
 
 // Interior page default
-.page-interior {
-
-}
+.page-interior {}
 
 // Single & Default page content
-.page-single {
-
-}
+.page-single {}
 
 
 // Search Results page
-.page-search {
-
-}
+.page-search {}
 
 
+// Interior page entry-content
 .entry-content {
   > * {
     font-family: $font-body; //override wp editor auto added styles
