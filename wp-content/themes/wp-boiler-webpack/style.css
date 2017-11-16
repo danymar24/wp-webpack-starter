@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   color: #222;
-  background-color: #ece6da;
+  background-color: #008f8b;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -1171,14 +1171,14 @@ body.nav-open {
   margin: 0 5px;
   background: transparent;
   border-radius: 50%;
-  border: 1px solid #ece6da;
+  border: 1px solid #008f8b;
   cursor: pointer; }
 
 .flickity-page-dots .dot.is-selected {
   width: 12px;
   height: 12px;
   opacity: 1;
-  background: #ece6da; }
+  background: #008f8b; }
 
 .gallery {
   position: relative;
@@ -1225,13 +1225,13 @@ body.nav-open {
   margin: 0 0 1.25em; }
 
 .entry-content a {
-  color: #ece6da;
+  color: #008f8b;
   text-decoration: underline; }
 
 .entry-content iframe {
   width: 100%; }
 
-.btn {
+.btn, .gform_button {
   display: inline-block;
   margin: 0;
   padding: 0.5625em 1.5625em;
@@ -1244,37 +1244,37 @@ body.nav-open {
   cursor: pointer;
   vertical-align: middle;
   white-space: nowrap; }
-  .btn.primary {
+  .btn.primary, .primary.gform_button {
     background-color: #0c5993; }
-    .btn.primary:hover {
+    .btn.primary:hover, .primary.gform_button:hover {
       text-decoration: none;
       background-color: #09426d;
       transition: all 0.3s ease; }
-    .btn.primary:active {
+    .btn.primary:active, .primary.gform_button:active {
       text-decoration: none;
       background-color: #02121d; }
-  .btn.secondary {
-    background-color: #ece6da; }
-    .btn.secondary:hover {
+  .btn.secondary, .gform_button {
+    background-color: #008f8b; }
+    .btn.secondary:hover, .gform_button:hover {
       text-decoration: none;
-      background-color: #ded4bf;
+      background-color: #006663;
       transition: all 0.3s ease; }
-    .btn.secondary:active {
+    .btn.secondary:active, .gform_button:active {
       text-decoration: none;
-      background-color: #c1ad86; }
-  .btn.white {
+      background-color: #00100f; }
+  .btn.white, .white.gform_button {
     background-color: #fff;
     color: #0c5993; }
-    .btn.white:hover {
+    .btn.white:hover, .white.gform_button:hover {
       text-decoration: none;
       background-color: #ebebeb;
       transition: all 0.3s ease; }
-    .btn.white:active {
+    .btn.white:active, .white.gform_button:active {
       text-decoration: none;
       background-color: #bfbfbf; }
-  .btn.rounded {
+  .btn.rounded, .rounded.gform_button {
     border-radius: 100px; }
-  .btn.icon {
+  .btn.icon, .icon.gform_button {
     background-position: 13px 13px;
     background-repeat: no-repeat;
     background-size: 25px;
@@ -1301,7 +1301,7 @@ select {
   textarea:focus,
   select:active,
   select:focus {
-    border-color: #ece6da; }
+    border-color: #008f8b; }
 
 @media (min-width: 900px) {
   textarea {
@@ -1385,7 +1385,7 @@ div.wpcf7-response-output {
   color: #0c5993; }
   .search-svg:hover {
     cursor: pointer;
-    color: #e0d6c2; }
+    color: #006b68; }
 
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
@@ -1409,6 +1409,60 @@ div.wpcf7-response-output {
   /* Microsoft Edge */
   color: #a2a2a2; }
 
+.gform_wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.gform_wrapper form {
+  margin-bottom: 0; }
+
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: #880e14; }
+
+.gf_left_half,
+.gf_right_half {
+  width: 100%; }
+  @media (min-width: 600px) {
+    .gf_left_half,
+    .gf_right_half {
+      width: 49%;
+      float: left; } }
+
+@media (min-width: 600px) {
+  .gf_left_half {
+    margin-right: 2%; } }
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  margin-bottom: 20px;
+  background-color: #fff; }
+  .ginput_container input:focus,
+  .ginput_container select:focus,
+  .ginput_container textarea:focus {
+    border-color: #008f8b; }
+
+.ginput_container textarea {
+  height: auto; }
+
+.gform_wrapper .gfield_error .gfield_label {
+  color: #880e14; }
+
+.gform_wrapper .gfield_error input,
+.gform_wrapper .gfield_error select,
+.gform_wrapper .gfield_error textarea {
+  border-color: #880e14;
+  background-color: #fff; }
+
+.validation_error {
+  color: #880e14; }
+
+.gform_confirmation_message {
+  min-height: 200px;
+  text-align: center; }
+
 .text-white {
   color: #fff; }
 
@@ -1416,7 +1470,7 @@ div.wpcf7-response-output {
   color: #0c5993; }
 
 .text-secondary {
-  color: #ece6da; }
+  color: #008f8b; }
 
 .text-body {
   color: #222; }
@@ -1430,7 +1484,7 @@ div.wpcf7-response-output {
   color: #fff; }
 
 .bg-secondary {
-  background: #ece6da;
+  background: #008f8b;
   color: #222; }
 
 .bg-gray {
@@ -1547,8 +1601,8 @@ div.wpcf7-response-output {
     position: absolute;
     width: 24px;
     height: 24px;
-    border-right: 2px solid #ece6da;
-    border-bottom: 2px solid #ece6da;
+    border-right: 2px solid #008f8b;
+    border-bottom: 2px solid #008f8b;
     right: 30px;
     bottom: calc(50% - 15px);
     -webkit-transform: rotate(-45deg);

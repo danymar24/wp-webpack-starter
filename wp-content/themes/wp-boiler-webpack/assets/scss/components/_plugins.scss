@@ -2,7 +2,11 @@
 
 // General Gravity Form styles
 .gform_wrapper {
-  ul {}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
   li {}
   form {
     margin-bottom: 0;
@@ -33,7 +37,11 @@
 .ginput_container select,
 .ginput_container textarea {
 	//@extend .form-control;
+  margin-bottom: 20px;
   background-color: $color-white;
+  &:focus {
+    border-color: $color-secondary;
+  }
 }
 
 .ginput_container textarea {
