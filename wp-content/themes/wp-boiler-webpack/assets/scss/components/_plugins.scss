@@ -13,6 +13,22 @@
   }
 }
 
+// l/r columns
+.gf_left_half,
+.gf_right_half {
+  width: 100%;
+  @include for-size(tablet-portrait-up) {
+    width: 49%;
+    float: left;
+  }
+}
+
+.gf_left_half {
+  @include for-size(tablet-portrait-up) {
+    margin-right: 2%;
+  }
+}
+
 .ginput_container input,
 .ginput_container select,
 .ginput_container textarea {
