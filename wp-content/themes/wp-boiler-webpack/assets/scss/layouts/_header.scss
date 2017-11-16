@@ -116,6 +116,7 @@
   }
 }
 body.nav-open {
+  position: fixed;
   overflow-y: hidden;
   .header {
     background: black;

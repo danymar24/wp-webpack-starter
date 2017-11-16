@@ -1,0 +1,51 @@
+// PLUGINS
+
+// General Gravity Form styles
+.gform_wrapper {
+  ul {}
+  li {}
+  form {
+    margin-bottom: 0;
+  }
+  .gfield_required {
+    padding-left: 1px;
+    color: $color-error;
+  }
+}
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+	//@extend .form-control;
+  background-color: $color-white;
+}
+
+.ginput_container textarea {
+  height: auto;
+}
+
+.gform_button {
+	@extend .btn;
+	@extend .btn.secondary;
+}
+
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: $color-error;
+  }
+  input,
+  select,
+  textarea {
+    border-color: $color-error;
+    background-color: $color-white
+  }
+}
+.validation_error {
+	color: $color-error
+}
+#gforms_confirmation_message {}
+
+.gform_confirmation_message {
+  min-height: 200px;
+  text-align: center;
+}

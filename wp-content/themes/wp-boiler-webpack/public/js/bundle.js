@@ -103,7 +103,7 @@ $(window).on('scroll', function () {
 /* 1 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import 'states/helpers';\n^\n      File to import not found or unreadable: states/helpers.\nParent style sheet: stdin\n      in /Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/assets/scss/style.scss (line 20, column 1)\n    at runLoaders (/Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/webpack/lib/NormalModule.js:192:19)\n    at /Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/sass-loader/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/sass-loader/node_modules/async/dist/async.js:906:16)\n    at options.error (/Applications/MAMP/htdocs/wp-starter/wp-content/themes/wp-boiler-webpack/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 2 */
