@@ -29,6 +29,7 @@
     "style-loader": "^0.13.2",
     "uglify-js": "^3.0.24",
     "uglifyjs-webpack-plugin": "^0.2.1",
+    "url-loader": "^0.6.2",
     "webpack": "^2.2.1"
   }
 }
