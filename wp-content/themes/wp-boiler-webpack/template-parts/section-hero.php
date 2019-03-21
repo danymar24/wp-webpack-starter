@@ -2,12 +2,11 @@
 //Custom Field Group == Section-Hero
   $hero_type = get_field('hero_type');
   $hero_bg = get_field('hero_bg');
+  $hero_bg_alt = get_field('hero_background_alt');
   $is_overlay = get_field('hero_is_overlay'); //boolean
-  $is_full_height = get_field('hero_is_full_height');//boolean
   $hero_title = get_field('hero_title');
   $hero_subtitle = get_field('hero_subtitle');
-  $hero_cta_title = get_field('hero_cta_title');
-  $hero_cta_link = get_field('hero_cta_link');
+
 ?>
 
 <?php if ($hero_type == "Slider") : ?>
@@ -40,31 +39,23 @@
   <?php endif; ?>
 
 <?php elseif ($hero_type == "Image"): ?>
-<section class="hero hero-type-default page-header vertical-center <?php if ($is_full_height == true) : echo 'full-height'; endif; ?><?php if ($is_overlay == true) : echo ' has-overlay'; endif; ?>" style="background-image:url('<?php echo $hero_bg; ?>');">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-offset-2 col-sm-8 hero-text">
-        <?php if ($hero_title) : ?>
-          <h1 class="hero-title"><?php echo $hero_title; ?></h1>
-        <?php elseif ( is_search() ) : ?>
-          <h1 class="hero-title"><?php printf( esc_html__( 'Results for: %s', 'sparxoo-dev' ), '<strong>' . get_search_query() . '</strong>' ); ?></h1>
-        <?php elseif ( is_404() ) : ?>
-          <h1 class="hero-title"><?php printf( esc_html__( 'Page Does Not Exist: 404', 'sparxoo-dev' ), '<strong>' . get_search_query() . '</strong>' ); ?></h1>
-        <?php else : ?>
-          <h1 class="hero-title"><?php the_title(); ?></h1>
-        <?php endif; ?>
-        <?php if ($hero_subtitle) : ?>
-          <p class="hero-subtitle"><?php echo $hero_subtitle; ?></p>
-        <?php else : ?>
-        <?php endif; ?>
-        <?php if ($hero_cta_link) : ?>
-          <a class="btn secondary hvr-ripple-out" href="<?php echo $hero_cta_link; ?>"><?php echo $hero_cta_title; ?></a>
-        <?php else : ?>
-        <?php endif; ?>
-      </div><!--/.col-->
-    </div><!--/.row-->
+<div class="page-header-image <?php if ($is_overlay == true) : echo 'has-overlay'; endif; ?>">
+  <div class="header-background">
+    <div class="overlay"></div>
+    <img src="<?php echo $hero_bg; ?>" alt="<?php echo $hero_bg_alt; ?>">
+  </div>
+  <div class="hero-text">
+    <?php if ($hero_title) : ?>
+      <h1 class="hero-title"><?php echo $hero_title; ?></h1>
+    <?php else : ?>
+    <?php endif; ?>
 
-  </div><!--/.container-->
-</section><!--/.hero.hero-type-default-->
+    <?php if ($hero_subtitle) : ?>
+      <p class="hero-subtitle"><?php echo $hero_subtitle; ?></p>
+    <?php else : ?>
+    <?php endif; ?>
+
+  </div>
+</div>
 <?php else : ?>
 <?php endif; ?>

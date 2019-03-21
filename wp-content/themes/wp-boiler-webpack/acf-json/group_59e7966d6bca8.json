@@ -33,6 +33,7 @@
     ],
     "active": 1,
     "description": "",
+    "modified": 1553211015,
     "fields": [
         {
             "key": "field_59e797071feec",
@@ -58,6 +59,5 @@
             "max_size": 1,
             "mime_types": ""
         }
-    ],
-    "modified": 1553193069
+    ]
 }

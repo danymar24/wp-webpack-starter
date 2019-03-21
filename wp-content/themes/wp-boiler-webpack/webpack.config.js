@@ -39,7 +39,7 @@ const config = {
   plugins: [
     new ExtractTextPlugin('../style.css'),
     new BrowserSyncPlugin({
-      proxy: 'localhost/wp-starter', // CHANGE THIS TO LOCALHOST REL PATH
+      proxy: 'localhost:8888/wp-starter', // CHANGE THIS TO LOCALHOST REL PATH
       port: 3000,
       files: [
           '**/*.php'

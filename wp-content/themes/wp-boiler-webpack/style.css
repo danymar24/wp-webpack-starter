@@ -10037,3 +10037,26 @@ a.text-dark:hover, a.text-dark:focus {
 }
 /*# sourceMappingURL=bootstrap.css.map */nav ul li {
   list-style: none; }
+
+.page-header-image {
+  position: relative; }
+  .page-header-image .header-background {
+    width: 100%;
+    top: 0;
+    left: 0; }
+    .page-header-image .header-background img {
+      width: 100%; }
+  .page-header-image .hero-text {
+    position: absolute;
+    bottom: 15%;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke; }
+  .page-header-image.has-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
