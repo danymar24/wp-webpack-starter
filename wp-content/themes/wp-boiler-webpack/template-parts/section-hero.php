@@ -1,18 +1,17 @@
 <?php
 //Custom Field Group == Section-Hero
-$hero_type = get_field('hero_type');
-$hero_bg = get_field('hero_bg');
-$is_overlay = get_field('hero_is_overlay'); //boolean
-$is_full_height = get_field('hero_is_full_height');//boolean
-$hero_title = get_field('hero_title');
-$hero_subtitle = get_field('hero_subtitle');
-$hero_cta_title = get_field('hero_cta_title');
-$hero_cta_link = get_field('hero_cta_link');
+  $hero_type = get_field('hero_type');
+  $hero_bg = get_field('hero_bg');
+  $is_overlay = get_field('hero_is_overlay'); //boolean
+  $is_full_height = get_field('hero_is_full_height');//boolean
+  $hero_title = get_field('hero_title');
+  $hero_subtitle = get_field('hero_subtitle');
+  $hero_cta_title = get_field('hero_cta_title');
+  $hero_cta_link = get_field('hero_cta_link');
 ?>
 
-<?php // If Hero Type "Slider" is selected
-if ($hero_type == "Slider") : ?>
-  <?php // slider loop
+<?php if ($hero_type == "Slider") : ?>
+  <?php
   $slides = get_field('hero_slider');
   if ($slides) : ?>
 
@@ -27,20 +26,20 @@ if ($hero_type == "Slider") : ?>
             </div>
           </div>
         <?php endforeach; ?>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-<?php else : ?>
-<?php endif; ?>
+  <?php else : ?>
+  <?php endif; ?>
 
-<?php else : ?>
+<?php elseif ($hero_type == "Image"): ?>
 <section class="hero hero-type-default page-header vertical-center <?php if ($is_full_height == true) : echo 'full-height'; endif; ?><?php if ($is_overlay == true) : echo ' has-overlay'; endif; ?>" style="background-image:url('<?php echo $hero_bg; ?>');">
   <div class="container">
     <div class="row">
@@ -65,13 +64,7 @@ if ($hero_type == "Slider") : ?>
       </div><!--/.col-->
     </div><!--/.row-->
 
-    <?php // if 'is_full_height' is set, add scroll down arrow
-    if ($is_full_height == true) : ?>
-    <div class="scroll-down">
-      <span class="arrow-down"></span>
-    </div><!--#scroll-down-->
-    <?php endif; ?>
-
   </div><!--/.container-->
 </section><!--/.hero.hero-type-default-->
+<?php else : ?>
 <?php endif; ?>
