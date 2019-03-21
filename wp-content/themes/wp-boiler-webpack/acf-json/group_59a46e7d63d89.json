@@ -1,0 +1,416 @@
+{
+    "key": "group_59a46e7d63d89",
+    "title": "Section - Hero",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "loss"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "insurance"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": [
+        {
+            "key": "field_59b04ab70e184",
+            "label": "Change Hero Settings",
+            "name": "edit_hero_settings",
+            "type": "true_false",
+            "instructions": "To customize the default hero settings, check \"Yes\". This will allow you to set the hero section to full-width, update it's title\/text, or add a hero background image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59d6667052034",
+            "label": "Hero Type",
+            "name": "hero_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default": "Default",
+                "Slider": "Slider"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "label",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59d66cd758996",
+            "label": "Hero Slider",
+            "name": "hero_slider",
+            "type": "repeater",
+            "instructions": "Add Hero Slider Content (images + text)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59d6667052034",
+                        "operator": "==",
+                        "value": "Slider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_59d66d0758997",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Slide",
+            "sub_fields": [
+                {
+                    "key": "field_59d66d0758997",
+                    "label": "Hero Slide Img",
+                    "name": "hero_slide_img",
+                    "type": "image",
+                    "instructions": "Add slide image.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_59d66d1b58998",
+                    "label": "Hero Slide Title",
+                    "name": "hero_slide_title",
+                    "type": "text",
+                    "instructions": "Add slide title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59d67d2dc1fbd",
+                    "label": "Hero Slide Subtitle",
+                    "name": "hero_slide_subtitle",
+                    "type": "textarea",
+                    "instructions": "Add slide subtitle.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_59d68270864fb",
+                    "label": "Hero Slide CTA Button Title",
+                    "name": "hero_slide_cta_title",
+                    "type": "text",
+                    "instructions": "If you want this slide to have a CTA Button, add the button's title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59d682a3864fc",
+                    "label": "Hero Slide CTA Button Link",
+                    "name": "hero_slide_cta_link",
+                    "type": "link",
+                    "instructions": "Where should the button link to?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_59a46f0f89da3",
+            "label": "Hero Background Image",
+            "name": "hero_bg",
+            "type": "image",
+            "instructions": "Upload the page's background image",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 2000,
+            "max_height": "",
+            "max_size": 1,
+            "mime_types": ""
+        },
+        {
+            "key": "field_59a46f419b11e",
+            "label": "Make Full Height?",
+            "name": "hero_is_full_height",
+            "type": "true_false",
+            "instructions": "Want hero image to be full-screen height? (Yes\/No)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59b0305af7e12",
+            "label": "Hero Background Image Overlay?",
+            "name": "hero_is_overlay",
+            "type": "true_false",
+            "instructions": "Want hero image to have an overlay? (Yes\/No)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59a4742a49407",
+            "label": "Hero Title",
+            "name": "hero_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a4744bff6b3",
+            "label": "Hero Subtitle",
+            "name": "hero_subtitle",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_59a4745e772a6",
+            "label": "Hero CTA Title",
+            "name": "hero_cta_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a47578fe1ed",
+            "label": "Hero CTA Link",
+            "name": "hero_cta_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b04ab70e184",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "modified": 1553193062
+}
