@@ -24,38 +24,38 @@ const config = {
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /()/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015']
         }
       },
-            {
+      {
         test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
         loader: 'url-loader?limit=100000'
-            }
+      }
     ]
   },
   plugins: [
     new ExtractTextPlugin('../style.css'),
     new BrowserSyncPlugin({
-        proxy: 'localhost/wp-starter', // CHANGE THIS TO LOCALHOST REL PATH
-        port: 3000,
-        files: [
-            '**/*.php'
-        ],
-        ghostMode: {
-            clicks: false,
-            location: false,
-            forms: false,
-            scroll: false
-        },
-        injectChanges: true,
-        logFileChanges: true,
-        logLevel: 'debug',
-        logPrefix: 'wepback',
-        notify: true,
-        reloadDelay: 0
+      proxy: 'localhost/wp-starter', // CHANGE THIS TO LOCALHOST REL PATH
+      port: 3000,
+      files: [
+          '**/*.php'
+      ],
+      ghostMode: {
+          clicks: false,
+          location: false,
+          forms: false,
+          scroll: false
+      },
+      injectChanges: true,
+      logFileChanges: true,
+      logLevel: 'debug',
+      logPrefix: 'wepback',
+      notify: true,
+      reloadDelay: 0
     })
   ]
 };

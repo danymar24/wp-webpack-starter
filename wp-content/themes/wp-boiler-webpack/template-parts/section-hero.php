@@ -12,37 +12,35 @@ $hero_cta_link = get_field('hero_cta_link');
 
 <?php // If Hero Type "Slider" is selected
 if ($hero_type == "Slider") : ?>
-    <?php // slider loop
-    $slides = get_field('hero_slider');
-    if ($slides) : ?>
-      <div class="gallery js-flickity" data-flickity-options='{"autoPlay": 5000, "prevNextButtons": false, "wrapAround": true, "pauseAutoPlayOnHover": false }'>
-          <?php foreach($slides as $slide) : ?>
-            <section class="hero hero-type-slider page-header vertical-center <?php if ($is_full_height == true) : echo 'full-height'; endif; ?> <?php if ($is_overlay == true) : echo ' has-overlay'; endif; ?>" style="background-image:url('<?php echo $slide['hero_slide_img']; ?>');">
-              <div class="container">
-                <div class="col-xs-12 gallery-cell hero-text">
-                  <h1 class="hero-title">
-                    <?php echo $slide['hero_slide_title']; ?>
-                  </h1>
-                  <p class="hero-subtitle">
-                    <?php echo $slide['hero_slide_subtitle']; ?>
-                  </p>
-                  <?php if ($slide['hero_slide_cta_link']) : ?>
-                    <a class="btn secondary hvr-ripple-out" href="<?php echo $slide['hero_slide_cta_link']; ?>"><?php echo $slide['hero_slide_cta_title']; ?></a>
-                  <?php else : ?>
-                  <?php endif; ?>
-                </div><!--/.gallery-cell-->
-              </div><!--/.container-->
-            </section>
-          <?php endforeach; ?>
-      </div><!--/.row.gallery-->
-    <?php endif; ?>
-<link href="https://npmcdn.com/flickity@2.0.10/dist/flickity.css" />
-<script src="https://unpkg.com/flickity@2.0.8/dist/flickity.pkgd.min.js"></script>
+  <?php // slider loop
+  $slides = get_field('hero_slider');
+  if ($slides) : ?>
 
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <?php foreach($slides as $slide) : ?>
+          <div class="carousel-item">
+            <img src="<?php echo $slide['hero_slide_img']; ?>" class="d-block w-100" alt="<?php echo $slide['hero_slide_alt']; ?>">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><?php echo $slide['hero_slide_title']; ?></h5>
+              <p><?php echo $slide['hero_slide_subtitle']; ?></p>
+            </div>
+          </div>
+        <?php endforeach; ?>
+    </div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<?php else : ?>
+<?php endif; ?>
 
-
-<?php // Else; Default hero type
-else : ?>
+<?php else : ?>
 <section class="hero hero-type-default page-header vertical-center <?php if ($is_full_height == true) : echo 'full-height'; endif; ?><?php if ($is_overlay == true) : echo ' has-overlay'; endif; ?>" style="background-image:url('<?php echo $hero_bg; ?>');">
   <div class="container">
     <div class="row">

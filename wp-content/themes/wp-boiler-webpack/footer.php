@@ -1,6 +1,4 @@
-<?php
-?>
-</div><!-- .site-content -->
+<?php ?>
 
 <footer class="footer section-wrap bg-black text-white">
   <div class="container">

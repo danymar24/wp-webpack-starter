@@ -1,3 +1,7 @@
 //import 'jquery';
 require ('../scss/style.scss');
-require ('../../node_modules/bootstrap/dist/js/bootstrap.min.js');
+require ('bootstrap');
+
+$(document).ready(function() {
+    $('.carousel').find('.carousel-item').first().addClass('active');
+})

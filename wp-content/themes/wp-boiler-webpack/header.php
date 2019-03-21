@@ -9,43 +9,26 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
 
 <?php
 //Custom Field Group == Site Options
 $site_logo = get_field('site_logo', 'option');
 ?>
 
-<header class="header" role="banner">
-    <div class="row around-xs">
-      <div class="col-xs-6 col-md-2">
-        <div class="logo">
-          <a href="<?php echo home_url(); ?>">
-            <?php if ($site_logo) : ?>
-              <img src="<?php echo $site_logo; ?>" title="<?php bloginfo('name'); ?>" rel="logo">
-            <?php else : ?>
-              <?php bloginfo('name'); ?>
-            <?php endif; ?>
-          </a>
-        </div><!--/.logo-->
-      </div><!--/.col-->
-      <div class="col-xs-6 col-md-10">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-primary') ); ?>
-        <div class="row pull-right">
-          <div class="nav-toggle row end-xs middle-xs" id="js-nav-toggle">
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
-          </div><!--/.nav-toggle-->
-        </div><!--/.row-->
-      </div><!--/.col-->
-    </div><!--/.row-->
-    <div class="nav-mobile row" id="js-nav-mobile">
-      <div class="col-xs-12">
-        <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'menu_class' => 'nav-mobile-wrap') ); ?>
-      </div><!--/.col-->
-    </div><!--/.nav-mobile-->
-</header><!--/.header-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <?php if ($site_logo) : ?>
+      <img src="<?php echo $site_logo ?>" width="30" height="30" class="d-inline-block align-top" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" rel="logo">
+    <?php endif; ?>
+    <?php bloginfo('name'); ?>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-primary') ); ?>
+  </div>
+</nav>
 
-
-<div class="site-content">
+<div class="container">
