@@ -9,7 +9,7 @@
 
   $args = array(
     'post_type'      => '',
-    'posts_per_page' => 2,
+    'posts_per_page' => 5,
     'paged'          => $paged,
   );
 
@@ -21,11 +21,6 @@
   if ( $wp_query->have_posts() ) :
 ?>
 
-    <div class="row">
-        <div class="col-md-12">
-            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        </div>
-    </div>
     <div class="row interior">
         <div class="col-sm-12">
             <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
@@ -48,8 +43,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="pagination">
-                        <div class="alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-                        <div class="alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+                        <div class="pagination-link alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+                        <div class="pagination-link alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
                     </div>
                 </div>
             </div>

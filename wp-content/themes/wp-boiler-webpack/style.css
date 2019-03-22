@@ -10092,3 +10092,8 @@ a.text-dark:hover, a.text-dark:focus {
     .post-thumbnail .post-image img {
       height: auto;
       width: 100%; }
+
+.pagination {
+  text-align: right; }
+  .pagination .pagination-link {
+    padding-right: 15px; }
