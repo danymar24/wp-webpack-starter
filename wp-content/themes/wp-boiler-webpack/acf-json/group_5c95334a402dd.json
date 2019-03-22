@@ -1,0 +1,107 @@
+{
+    "key": "group_5c95334a402dd",
+    "title": "Page - Contact",
+    "fields": [
+        {
+            "key": "field_5c95335359c1d",
+            "label": "Address",
+            "name": "address",
+            "type": "textarea",
+            "instructions": "Give the address of your location",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5c95346259c22",
+            "label": "Form",
+            "name": "form",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c9533f659c21",
+            "label": "Display Map",
+            "name": "display_map",
+            "type": "true_false",
+            "instructions": "Do you want to display a map of your business?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Do you want to display a map of your business?",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c9533c459c20",
+            "label": "Map",
+            "name": "map",
+            "type": "google_map",
+            "instructions": "Enter the location of the map",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c9533f659c21",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1553282951
+}
