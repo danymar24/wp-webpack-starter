@@ -1,3 +1,14 @@
+.carousel {
+    max-height: 700px;
+    overflow: hidden;
+    .item {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
 .page-header-image {
     position: relative;
 

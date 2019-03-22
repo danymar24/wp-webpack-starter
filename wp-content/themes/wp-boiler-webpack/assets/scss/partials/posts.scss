@@ -1,0 +1,36 @@
+.post {
+    padding-bottom: 20px;
+}
+
+.post-thumbnail {
+    height: 230px;
+    overflow: hidden;
+
+    .carousel {
+        height: 100%;
+        overflow: hidden;
+
+        .carousel-inner {
+            height: 100%;
+
+            .carousel-item {
+                height: 100%;
+                position: relative;
+                
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .post-image {
+        height: 100%;
+        overflow: hidden;
+        
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}

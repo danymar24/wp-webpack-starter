@@ -18,7 +18,7 @@
       <div class="carousel-inner">
         <?php foreach($slides as $slide) : ?>
           <div class="carousel-item">
-            <img src="<?php echo $slide['hero_slide_img']; ?>" class="d-block w-100" alt="<?php echo $slide['hero_slide_alt']; ?>">
+            <?php echo wp_get_attachment_image($slide_image, 'full'); ?>
             <div class="carousel-caption d-none d-md-block">
               <h5><?php echo $slide['hero_slide_title']; ?></h5>
               <p><?php echo $slide['hero_slide_subtitle']; ?></p>
