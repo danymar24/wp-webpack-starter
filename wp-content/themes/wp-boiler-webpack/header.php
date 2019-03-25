@@ -6,13 +6,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
+
+<?php if(get_field('analytics_key', 'option')) : ?>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php the_field('analytics_key', 'option'); ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', <?php the_field('analytics_key', 'option'); ?>);
+  </script>
+
+<?php endif; ?>
+
 </head>
 
 <body <?php body_class(); ?>>
 
 <?php
-//Custom Field Group == Site Options
-$site_logo = get_field('site_logo', 'option');
+  //Custom Field Group == Site Options
+  $site_logo = get_field('site_logo', 'option');
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
