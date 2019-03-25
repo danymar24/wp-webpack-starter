@@ -57,5 +57,20 @@
 
   </div>
 </div>
+<?php elseif ($hero_type == "Video") : 
+  
+  $video_mp4 = get_field('hero_mp4_video');
+  $video_webm = get_field('hero_webm_video');
+
+  $videoAttr = array(
+    'mp4' => $video_mp4,
+    'webm'=> $video_webm
+  );
+
+  echo wp_video_shortcode($videoAttr);
+
+?>
+
+  
 <?php else : ?>
 <?php endif; ?>

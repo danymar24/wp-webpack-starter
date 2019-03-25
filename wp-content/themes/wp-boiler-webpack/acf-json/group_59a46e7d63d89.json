@@ -45,14 +45,15 @@
             "choices": {
                 "Default": "Default",
                 "Image": "Image",
-                "Slider": "Slider"
+                "Slider": "Slider",
+                "Video": "Video"
             },
             "default_value": [],
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
-            "ajax": 0,
             "return_format": "label",
+            "ajax": 0,
             "placeholder": ""
         },
         {
@@ -195,6 +196,60 @@
             "max_width": 2000,
             "max_height": "",
             "max_size": 1,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c992f7f9cea3",
+            "label": "Hero MP4 Video",
+            "name": "hero_mp4_video",
+            "type": "file",
+            "instructions": "Select the video for the hero section",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59d6667052034",
+                        "operator": "==",
+                        "value": "Video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": 30,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c993210c0f4c",
+            "label": "Hero WebM Video",
+            "name": "hero_webm_video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59d6667052034",
+                        "operator": "==",
+                        "value": "Video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": 30,
             "mime_types": ""
         },
         {
@@ -344,5 +399,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1553280358
+    "modified": 1553544097
 }

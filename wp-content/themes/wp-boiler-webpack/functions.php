@@ -137,3 +137,7 @@ add_filter( 'parent_post_rel_link', '__return_false' );
 add_filter( 'start_post_rel_link', '__return_false' );
 add_filter( 'previous_post_rel_link', '__return_false' );
 add_filter( 'next_post_rel_link', '__return_false' );
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
