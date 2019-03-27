@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package sparxoo-dev
+ * @package gromkt-dev
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function sparxoo_dev_body_classes( $classes ) {
+function gromkt_dev_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -26,14 +26,14 @@ function sparxoo_dev_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'sparxoo_dev_body_classes' );
+add_filter( 'body_class', 'gromkt_dev_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function sparxoo_dev_pingback_header() {
+function gromkt_dev_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'sparxoo_dev_pingback_header' );
+add_action( 'wp_head', 'gromkt_dev_pingback_header' );

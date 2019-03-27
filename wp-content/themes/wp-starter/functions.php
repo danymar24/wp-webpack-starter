@@ -1,10 +1,10 @@
 <?php
 
-if ( ! function_exists( 'sparxoo_dev_setup' ) ) :
+if ( ! function_exists( 'gromkt_dev_setup' ) ) :
 
-function sparxoo_dev_setup() {
+function gromkt_dev_setup() {
 
-	load_theme_textdomain( 'sparxoo-dev', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'gromkt-dev', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -13,10 +13,10 @@ function sparxoo_dev_setup() {
 
 	// Nav Theme Locations
 	register_nav_menus( array(
-	    'top-header-menu' => __( 'Top Header Menu', 'sparxoo-dev' ),
-	    'header-menu' => __( 'Header Menu', 'sparxoo-dev' ),
-	    'mobile-menu' => __( 'Mobile Menu', 'sparxoo-dev' ),
-	    'footer-menu' => __( 'Footer Menu', 'sparxoo-dev' )
+	    'top-header-menu' => __( 'Top Header Menu', 'gromkt-dev' ),
+	    'header-menu' => __( 'Header Menu', 'gromkt-dev' ),
+	    'mobile-menu' => __( 'Mobile Menu', 'gromkt-dev' ),
+	    'footer-menu' => __( 'Footer Menu', 'gromkt-dev' )
 	) );
 
 	add_theme_support( 'html5', array(
@@ -28,7 +28,7 @@ function sparxoo_dev_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'sparxoo_dev_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'gromkt_dev_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -37,7 +37,7 @@ function sparxoo_dev_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', 'sparxoo_dev_setup' );
+add_action( 'after_setup_theme', 'gromkt_dev_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -46,32 +46,32 @@ add_action( 'after_setup_theme', 'sparxoo_dev_setup' );
  *
  * @global int $content_width
  */
-function sparxoo_dev_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'sparxoo_dev_content_width', 640 );
+function gromkt_dev_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gromkt_dev_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'sparxoo_dev_content_width', 0 );
+add_action( 'after_setup_theme', 'gromkt_dev_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function sparxoo_dev_widgets_init() {
+function gromkt_dev_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'sparxoo-dev' ),
+		'name'          => esc_html__( 'Sidebar', 'gromkt-dev' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'sparxoo-dev' ),
+		'description'   => esc_html__( 'Add widgets here.', 'gromkt-dev' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'sparxoo_dev_widgets_init' );
+add_action( 'widgets_init', 'gromkt_dev_widgets_init' );
 
 
 // Enqueue scripts and styles.
-function sparxoo_dev_scripts() {
+function gromkt_dev_scripts() {
 	wp_enqueue_style( 'bundle-css', get_stylesheet_uri(), array(), '1' );
   //wp_enqueue_style( 'bundle-css', get_template_directory_uri() . '/public/css/style.css' );
 
@@ -84,7 +84,7 @@ function sparxoo_dev_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'sparxoo_dev_scripts' );
+add_action( 'wp_enqueue_scripts', 'gromkt_dev_scripts' );
 
 
 // ACF - Add Options page-header
@@ -106,7 +106,7 @@ function custom_excerpt_more() {
    // add more link to excerpt
    function theme_custom_excerpt_more($more) {
       global $post;
-      return '<a class="more-link" href="'. get_permalink($post->ID) . '">'. __('...', 'sparxoo_dev') .'</a>';
+      return '<a class="more-link" href="'. get_permalink($post->ID) . '">'. __('...', 'gromkt_dev') .'</a>';
    }
    add_filter('excerpt_more', 'theme_custom_excerpt_more');
 }

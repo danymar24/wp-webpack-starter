@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package sparxoo-dev
+ * @package gromkt-dev
  */
 
 get_header(); ?>

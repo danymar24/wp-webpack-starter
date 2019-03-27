@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package sparxoo-dev
+ * @package gromkt-dev
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses sparxoo_dev_header_style()
+ * @uses gromkt_dev_header_style()
  */
-function sparxoo_dev_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'sparxoo_dev_custom_header_args', array(
+function gromkt_dev_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'gromkt_dev_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'sparxoo_dev_header_style',
+		'wp-head-callback'       => 'gromkt_dev_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'sparxoo_dev_custom_header_setup' );
+add_action( 'after_setup_theme', 'gromkt_dev_custom_header_setup' );
 
-if ( ! function_exists( 'sparxoo_dev_header_style' ) ) :
+if ( ! function_exists( 'gromkt_dev_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see sparxoo_dev_custom_header_setup().
+ * @see gromkt_dev_custom_header_setup().
  */
-function sparxoo_dev_header_style() {
+function gromkt_dev_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*
