@@ -28,7 +28,7 @@ define('DB_COLLATE', '');
 
 ## Build Setup
 
-``` bash
+```bash
 # cd into wp-content/themes/themes/wp-boiler-webpack
 # change proxy location for browsersync in webpack.config.js file
 # on line 38, change proxy: "localhost/site-path"
