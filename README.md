@@ -43,3 +43,4 @@ npm run build
 
 # watch files with BrowserSync
 npm run watch
+```
